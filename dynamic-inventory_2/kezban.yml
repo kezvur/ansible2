@@ -1,0 +1,8 @@
+- name: Remove Apache from webservers
+  hosts: all
+  tasks:
+   - name: Remove Apache
+     ansible.builtin.yum:
+       name: httpd
+       state: absent
+       autoremove: yes
