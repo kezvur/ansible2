@@ -1,0 +1,5 @@
+- name: Test Connectivity
+  hosts: all
+  tasks:
+   - name: Ping test
+     ansible.builtin.ping:  #ansible-playbook playbook1.yml(playbook1 ismi yaml ismidir diğer yamlları çalıştırmak için burayı yaml isimleriyle değiştirin) teminalde yaml çalışması için bu kodu yapıştırın

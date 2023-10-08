@@ -1,0 +1,14 @@
+- name: Apache installation for webservers
+  hosts: all
+  become: true
+  vars:
+    ansible_ssh_private_key_file: "/home/ec2-user/dynamic-inventory/my_key.pem" #key pairinizin yolu
+  tasks:
+   - name: install the latest version of Apache
+     ansible.builtin.yum:
+       name: httpd
+       state: latest
+
+   - name: start Apache
+     ansible.builtin.shell: "service httpd start" #ansible-playbook install.yml -i inventory_aws_ec2.yml
+  

@@ -1,0 +1,4 @@
+Dynamis inventory ile ilgili kodlar mevcuttur.İlk önce terraform kodlarını çalıştırın.Terraform kodlarıyla otomatik kontrol node ve ona bağlı nodelar 
+oluşacaktır.
+Daha sonra  consol aracılığıyla ssh ile bağlanarak control noda dynamic-inventory dosyasını yapıştırın. ve pip install --user boto3 botocore bu komutu çalıştırın.Daha sonra bu dosyadaki inventory_aws_ec2.yml çalıştırın. dynamic-inventory içindeki diğer yaml dosyaları örnektir.
+dynamic-inventory altındaki ansible.cfg dosyasında inventory kısmına  ~\dynamic-inventory\inventory_aws_ec2.yml bu yolu yapıştırın.Benim dosya dizinim böyle siz dynamic-inventory farklı yerde oluşturduysanız onu yapıştırın.

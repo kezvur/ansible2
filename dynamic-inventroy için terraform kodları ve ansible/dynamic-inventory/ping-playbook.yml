@@ -1,0 +1,8 @@
+- name: ping them all
+  hosts: all
+   vars:
+    ansible_ssh_private_key_file: "/home/ec2-user/my_key.pem"  #Makinanın içinde nerdeyse key_pem onun yolunu yapıştırmak gerekir
+  tasks:
+  tasks:
+    - name: pinging
+      ansible.builtin.ping: #ansible-playbook ping-playbook.yml -i inventory_aws_ec2.yml  terminalde yaml çalıştırmak için
