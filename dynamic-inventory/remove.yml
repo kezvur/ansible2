@@ -1,0 +1,11 @@
+- name: Apache installation for webservers
+  hosts: ec2-54-159-76-247.compute-1.amazonaws.com
+  vars:
+    ansible_ssh_private_key_file: "/home/ec2-user/dynamic-inventory/my_key.pem"
+  tasks:
+   - name: install the latest version of Apache
+     ansible.builtin.yum:
+       name: httpd
+       autoremove: yes #tekbaşına autoremove olur.Ancak purge kullanacaksan muhakkak autoremove olacak.3 ü birliktede olur
+    
+  
